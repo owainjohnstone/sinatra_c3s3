@@ -24,10 +24,27 @@ end
 get '/rsvps' do
   @rsvps = CSV.read('rsvps.csv')
 
-  @acceptances = []
-  @rejections  = []
-  @acceptance_count = 0
-  @rejection_count  = 0
+@rsvps.each do |reply|
+  if reply.include = yes
+    @acceptances << reply
+  else
+    @rejections << word
+  end
+
+sum = 0
+
+  @acceptances.each do |n|
+    sum = sum + n
+  end
+
+sum1 = 0
+@rejections.each do |p|
+    sum1 = sum1 + p
+  end
+
+
+  @acceptance_count = sum
+  @rejection_count  = sum1
 
   # TODO categorise rsvps into acceptances/rejections and count them
 
