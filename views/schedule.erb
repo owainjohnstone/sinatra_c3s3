@@ -6,11 +6,30 @@
 <body>
   <h1>Event schedule</h1>
 
-  <table>
+  <table><% @schedule.each do |@row| %>
+  			<% @row.each do |item| %>
     <tr>
-      <td>8pm</td>
-      <td>Doors open</td>
+      <td><%= item %></td>
+      <td><%= item %></td>
     </tr>
+     <tr>
+      <td><%= item %></td>
+      <td><%= item %></td>
+    </tr>
+     <tr>
+      <td><%= item %></td>
+      <td><%= item %></td>
+    </tr>
+     <tr>
+      <td><%= item %></td>
+      <td><%= item %></td>
+    </tr>
+     <tr>
+      <td><%= item %></td>
+      <td><%= item %></td>
+    </tr>
+    <% end %>
+    <% end %>
     <!-- etc. etc. -->
   </table>
 
