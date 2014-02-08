@@ -24,11 +24,12 @@ end
 get '/rsvps' do
   @rsvps = CSV.read('rsvps.csv')
 
+
 @rsvps.each do |reply|
   if reply.include = yes
     @acceptances << reply
   else
-    @rejections << word
+    @rejections << reply
   end
 
 sum = 0
@@ -50,4 +51,5 @@ sum1 = 0
 
 
   erb :rsvps
+end
 end
